@@ -1,6 +1,6 @@
 <div class="itembox">
   <h2 class="titletext"><%= @product.name %></h2>
-  <p><%= link_to "Rename", edit_product_path(@product) %></p>
+  <p><%= link_to "Edit properties", edit_product_path(@product) %></p>
   <h3 class="subtext">Price: $<%= @product.cost %></h3>
   <h3 class="subtext">Country of Origin: <%= @product.country_of_origin %></h3>
 </div>
@@ -8,13 +8,16 @@
 
 
   <% if @product.reviews.any? %>
-  <h4>Here are the reviews for this product:</h4>
-
+  <h3>Here are the reviews for this product:</h3>
+  <br>
   <% @product.reviews.each do |review| %>
   <ul>
     <li>
       <%= link_to review.author, product_review_path(@product, review) %>
+      <p>Score: <%= review.rating %></p>
+      <p><%= review.content_body %></p>
     </li>
+    <br>
   </ul>
   <% end %>
   <% else %>
@@ -25,11 +28,10 @@
 
   <p>
     <%=
-    link_to "Delete", product_path(@product),
+    link_to "Delete Project", product_path(@product),
     :data => {:confirm => "Really delete product?", :method => "delete"}
     %>
   </p>
 
+  <p><%= link_to "Return to products", products_path %></p>
 </div>
-
-<p class="center_p"><%= link_to "Return to products", products_path %></p>

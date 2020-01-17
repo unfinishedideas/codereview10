@@ -1,2 +1,6 @@
-<h2>Edit product</h2>
-<%= render "layouts/product_form" %>
+<div class="itembox">
+  <h2 class="subtitle">Edit <%= @product.name %></h2>
+  <%= render "layouts/product_form" %>
+  <br>
+  <p><%= link_to "Back", product_path(@product) %></p>
+</div>

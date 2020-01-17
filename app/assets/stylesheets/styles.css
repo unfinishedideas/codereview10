@@ -5,10 +5,42 @@ body {
 
 a {
   color: #f5dfdb;
+  font-size: 20px;
 }
 
 p {
   color: #F3EEBD;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: #b7d9c6;
+}
+
+input {
+  color: black;
+}
+textarea {
+  color: black;
+}
+
+label {
+  color: white;
+}
+
+.product_name {
+  color: rgb(82, 213, 255);
+}
+
+.author_name {
+  color: rgb(223, 171, 255);
+}
+
+.rating_text {
+  color: rgb(255, 213, 105);
 }
 
 .center_p {
@@ -30,8 +62,8 @@ p {
   padding: 2%;
   border: 2px #A2BEAE solid;
   border-radius: 20px;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 2%;
   margin-bottom: 2%;
 }

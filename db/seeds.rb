@@ -16,8 +16,19 @@ Review.destroy_all
     name_a = Faker::Creature::Cat.name
     name_b = Faker::Hipster.word
     fullname = (name_a + " " + name_b).titleize
-    Review.create!(author: fullname, rating: rating, content_body: Faker::ChuckNorris.fact, product_id: product.id)
+    Review.create!(author: fullname, rating: rating, content_body: (Faker::ChuckNorris.fact + ".... Ham hock short loin tail porchetta beef."), product_id: product.id)
   end
 end
+
+product = Product.create!(name: "The Mega-Juicer", cost: 200, country_of_origin: "USA")
+5.times do |index|
+  rating = rand(5)
+  name_a = Faker::Creature::Cat.name
+  name_b = Faker::Hipster.word
+  fullname = (name_a + " " + name_b).titleize
+  Review.create!(author: fullname, rating: rating, content_body: (Faker::ChuckNorris.fact + ".... Ham hock short loin tail porchetta beef."), product_id: product.id)
+end
+
+
 p "Created #{Product.count} Products"
 p "Created #{Review.count} reviews"

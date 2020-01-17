@@ -1,10 +1,13 @@
 <!-- <h2>Products Home</h2> -->
+
 <div class="itembox">
   <% if @recent_products.any? %>
   <h3 class="subtitle">Fresh Items:</h3>
   <ul>
     <% @recent_products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
+    <li><%= link_to product.name, product_path(product) %>
+      <p>$<%= product.cost %></p>
+    </li>
     <% end %>
   </ul>
   <% else %>
@@ -12,23 +15,31 @@
   <% end %>
 </div>
 
+
+
 <div class="itembox">
   <% if @most_reviewed.any? %>
   <h3 class="subtitle">Most Reviewed Items:</h3>
   <ul>
     <% @most_reviewed.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
+    <li><%= link_to product.name, product_path(product) %>
+      <p>$<%= product.cost %></p>
+    </li>
     <% end %>
   </ul>
   <% end %>
 </div>
+
+
 
 <div class="itembox">
   <% if @usa_products.any? %>
   <h3 class="subtitle">Locally Made Junk:</h3>
   <ul>
     <% @usa_products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
+    <li><%= link_to product.name, product_path(product) %>
+      <p>$<%= product.cost %></p>
+    </li>
     <% end %>
   </ul>
   <% else %>
@@ -37,12 +48,15 @@
 </div>
 
 
+
 <div class="itembox">
   <h3 class="subtitle">All Stock:</h3>
   <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
+    <li><%= link_to product.name, product_path(product) %>
+      <p>$<%= product.cost %></p>
+    </li>
     <% end %>
   </ul>
   <% else %>
@@ -51,4 +65,4 @@
 </div>
 
 
-<p><%= link_to "Create new product", new_product_path %></p>
+<h2 class="center_p"><%= link_to "Create new product", new_product_path %></h2>
