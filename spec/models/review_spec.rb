@@ -9,3 +9,10 @@ describe Review do
   it { should validate_length_of(:author).is_at_most(100) }
   it { should validate_numericality_of(:rating) }
 end
+
+# describe Review do
+#   it("titleizes the name of an review") do
+#     review = Review.create({author: "a dummy reVIEweR", rating: 5, content_body: "USA USA USA USA USA" })
+#     expect(review.author()).to(eq("A Dummy Reviewer"))
+#   end
+# end
