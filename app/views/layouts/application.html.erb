@@ -12,20 +12,19 @@
 <body>
 
   <% content_for(:navbar) do %>
-    <h3 class="navbar">
+    <h4 class="navbar">
       <a href="/">Home</a> |
       <%= link_to "Products", products_path %>
-    </h3>
+    </h4>
   <% end %>
 
-  <%= yield :navbar %>
-
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
-
-  <h1 class="splash_text">Product Town</h1>
-
-  <%= yield %>
+  <div class="container">
+    <h1 class="splash_text">Product Town</h1>
+    <%= yield :navbar %>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>

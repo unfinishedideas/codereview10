@@ -1,15 +1,16 @@
-<h3>About us</h3>
-<p>We are a dope company</p>
+<div class="itembox">
+  <h3 class="subtitle">About us</h3>
+  <p class="center_p">We are a dope company. We strive to give you the best possible experience when shopping so much so that we're going to use meat flavored ipsum for the rest of this blurb. Andouille burgdoggen bacon meatloaf pork belly ham hock ribeye. Pancetta ribeye brisket porchetta t-bone. Filet mignon boudin doner bresaola meatloaf sausage. Filet mignon tail pork chop, swine beef ribs tenderloin picanha ribeye pork capicola burgdoggen doner biltong. Shoulder landjaeger rump ball tip doner kielbasa hamburger shankle.</p>
+</div>
 <!-- <hr> -->
-
-<% if @recent_products.any? %>
-<h3>Fresh Items:</h3>
-<ul>
-  <% @recent_products.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
+<div class="itembox">
+  <% if @recent_products.any? %>
+  <h3 class="subtitle">Fresh Items:</h3>
+  <ul>
+    <% @recent_products.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
   <% end %>
-</ul>
-<% end %>
-
-
-<%= link_to "See all of our products!", products_path %>
+  <p class="center_p"><%= link_to "See all of our products!", products_path %></p>
+</div>

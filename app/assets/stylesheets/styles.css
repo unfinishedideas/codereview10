@@ -1,0 +1,43 @@
+body {
+  background-color: #273244;
+  color: #B0B4B4;
+}
+
+a {
+  color: #f5dfdb;
+}
+
+p {
+  color: #F3EEBD;
+}
+
+.center_p {
+  text-align: center;
+}
+
+.splash_text {
+  color: #e6aba0;
+  text-align: center;
+  font-size: 40px;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.itembox {
+  background-color: #6A655F;
+  padding: 2%;
+  border: 2px #A2BEAE solid;
+  border-radius: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.subtitle {
+  /* text-shadow: 2px 2px black; */
+  color: #b7d9c6;
+  text-align: center;
+}
