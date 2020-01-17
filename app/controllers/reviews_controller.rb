@@ -36,16 +36,16 @@ class ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
     if @review.update(review_params)
-      redirect_to album_path(@review.product)
+      redirect_to product_path(@review.product)
     else
       render :edit
     end
   end
 
   def destroy
-    @review = Song.find(params[:id])
+    @review = Review.find(params[:id])
     @review.destroy
-    redirect_to album_path(@review.product)
+    redirect_to product_path(@review.product)
   end
 
   private
