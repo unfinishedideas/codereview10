@@ -10,6 +10,16 @@
 </head>
 
 <body>
+
+  <% content_for(:navbar) do %>
+    <h3 class="navbar">
+      <a href="/">Home</a> |
+      <%= link_to "Products", products_path %>
+    </h3>
+  <% end %>
+
+  <%= yield :navbar %>
+
   <%= flash[:alert] %>
   <%= flash[:notice] %>
 
