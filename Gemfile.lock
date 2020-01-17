@@ -68,6 +68,8 @@ GEM
     crass (1.0.6)
     diff-lcs (1.3)
     erubi (1.9.0)
+    faker (2.10.1)
+      i18n (>= 1.6, < 2)
     ffi (1.12.1-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -202,6 +204,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  faker
   jbuilder (~> 2.7)
   jquery-rails
   launchy
