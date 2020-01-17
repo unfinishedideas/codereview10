@@ -1,3 +1,5 @@
+require 'pry'
+
 class ReviewsController < ApplicationController
 
   # def index
@@ -11,21 +13,22 @@ class ReviewsController < ApplicationController
   end
 
   def create
-     @product = Product.find(params[:product_id])
-     @review = @product.reviews.new(review_params)
-     if @review.save
-       redirect_to product_path(@product)
-     else
-       render :new
-     end
-   end
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new(review_params)
+    if @review.save
+      flash[:notice] = "Review successfully added!"
+      redirect_to product_path(@product)
+    else
+      flash[:alert] = "Something went wrong! Review not created."
+      render :new
+    end
+  end
 
-
-   def edit
-     @product = Product.find(params[:product_id])
-     @review = Review.find(params[:id])
-     render :edit
-   end
+  def edit
+    @product = Product.find(params[:product_id])
+    @review = Review.find(params[:id])
+    render :edit
+  end
 
   def show
     @product = Product.find(params[:product_id])
@@ -35,9 +38,12 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
+    @product = Product.find(params[:product_id])
     if @review.update(review_params)
+      flash[:notice] = "Review successfully updated!"
       redirect_to product_path(@review.product)
     else
+      flash[:alert] = "Something went wrong! Review not updated."
       render :edit
     end
   end
@@ -45,6 +51,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
+    flash[:notice] = "Review successfully destroyed!"
     redirect_to product_path(@review.product)
   end
 
