@@ -1,5 +1,37 @@
 <h2>Products Home</h2>
 
+<% if @recent_products.any? %>
+<h3 class="subtitle">Fresh Items:</h3>
+<ul>
+  <% @recent_products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<h3 class="subtitle">Nothing Fresh</h3>
+<% end %>
+
+<% if @most_reviewed.any? %>
+<h3 class="subtitle">Most Reviewed Items:</h3>
+<ul>
+  <% @most_reviewed.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<% if @usa_products.any? %>
+<h3 class="subtitle">Locally Made Junk:</h3>
+<ul>
+  <% @usa_products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<h3 class="subtitle">Nothing From the US of A</h3>
+<% end %>
+
+<h3 class="subtitle">All Stock:</h3>
 <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>

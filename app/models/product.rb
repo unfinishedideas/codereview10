@@ -8,10 +8,22 @@ class Product < ApplicationRecord
   validates_length_of :country_of_origin, minimum: 3
   validates_numericality_of :cost, only_integer: true
 
-  before_save(:titleize_product)
+  scope :most_recent, -> { order(created_at: :desc).limit(3)}
 
-  private
-  def titleize_product
-    self.name = self.name.titleize
+  scope :most_reviews, -> {(
+    select("products.id, products.name, count(reviews.id) as reviews_count")
+    .joins(:reviews)
+    .group("products.id")
+    .order("reviews_count DESC")
+    .limit(10)
+    )}
+
+    scope :from_usa, -> { where(country_of_origin: "USA") }
+
+    before_save(:titleize_product)
+
+    private
+    def titleize_product
+      self.name = self.name.titleize
+    end
   end
-end
