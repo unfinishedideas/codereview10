@@ -4,6 +4,22 @@
 
 <p><%= link_to "Edit", edit_product_path(@product) %></p>
 
+<% if @product.reviews.any? %>
+<h4>Here are the reviews for this product:</h4>
+
+<% @product.reviews.each do |review| %>
+<ul>
+  <li>
+    <%= link_to review.author, product_review_path(@product, review) %>
+  </li>
+</ul>
+<% end %>
+<% else %>
+<p>No reviews are listed for this product yet.</p>
+<% end %>
+
+<p><%= link_to "Review this product", new_product_review_path(@product) %></p>
+
 <p>
   <%=
     link_to "Delete", product_path(@product),
