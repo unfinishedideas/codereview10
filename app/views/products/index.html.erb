@@ -1,68 +1,23 @@
 <!-- <h2>Products Home</h2> -->
 
 <div class="itembox">
-  <% if @recent_products.any? %>
   <h3 class="subtitle">Fresh Items:</h3>
-  <ul>
-    <% @recent_products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %>
-      <p>$<%= product.cost %></p>
-    </li>
-    <% end %>
-  </ul>
-  <% else %>
-  <h3 class="subtitle">Nothing Fresh</h3>
-  <% end %>
+  <%= render "layouts/display_products", :products => @recent_products %>
 </div>
 
-
-
 <div class="itembox">
-  <% if @most_reviewed.any? %>
   <h3 class="subtitle">Most Reviewed Items:</h3>
-  <ul>
-    <% @most_reviewed.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %>
-      <p>$<%= product.cost %></p>
-    </li>
-    <% end %>
-  </ul>
-  <% end %>
+  <%= render "layouts/display_products", :products => @most_reviewed %>
 </div>
-
-
 
 <div class="itembox">
-  <% if @usa_products.any? %>
   <h3 class="subtitle">Locally Made Junk:</h3>
-  <ul>
-    <% @usa_products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %>
-      <p>$<%= product.cost %></p>
-    </li>
-    <% end %>
-  </ul>
-  <% else %>
-  <h3 class="subtitle">Currently No Products from the USA</h3>
-  <% end %>
+  <%= render "layouts/display_products", :products => @usa_products %>
 </div>
-
-
 
 <div class="itembox">
   <h3 class="subtitle">All Stock:</h3>
-  <% if @products.any? %>
-  <ul>
-    <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %>
-      <p>$<%= product.cost %></p>
-    </li>
-    <% end %>
-  </ul>
-  <% else %>
-  <p>There are no products yet.</p>
-  <% end %>
+  <%= render "layouts/display_products", :products => @products %>
 </div>
-
 
 <h2 class="center_p"><%= link_to "Create new product", new_product_path %></h2>

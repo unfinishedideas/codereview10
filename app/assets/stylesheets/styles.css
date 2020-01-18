@@ -4,7 +4,8 @@ body {
 }
 
 a {
-  color: #f5dfdb;
+  color: #67b3f4;
+  /* text-shadow: 2px 2px #52406a; */
   font-size: 20px;
 }
 
@@ -29,6 +30,9 @@ textarea {
 
 label {
   color: white;
+}
+ul {
+  list-style-type:none;
 }
 
 .product_name {
@@ -58,7 +62,8 @@ label {
 }
 
 .itembox {
-  background-color: #6A655F;
+  /* background-color: #6A655F; */
+  background-color: #4e4a46;
   padding: 2%;
   border: 2px #A2BEAE solid;
   border-radius: 20px;
