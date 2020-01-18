@@ -9,7 +9,7 @@ describe "the add a product process" do
     fill_in 'Country of origin', :with => "USA"
     click_on 'Create Product'
     expect(page).to have_content 'Product successfully added!'
-    expect(page).to have_content 'The Jucinator 3000'
+    expect(page).to have_content('The Juicinator 3000')
   end
 
   it "gives an error when no name is entered" do
