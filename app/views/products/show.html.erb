@@ -1,8 +1,8 @@
 <div class="itembox">
   <h2 class="titletext"><%= @product.name %></h2>
+  <h3 class="subtext">Price: <span class="price_text">$<%= @product.cost %></span></h3>
+  <h3 class="subtext">Country of Origin: <span class="country_text"><%= @product.country_of_origin %></span></h3>
   <p><%= link_to "Edit properties", edit_product_path(@product) %></p>
-  <h3 class="subtext">Price: $<%= @product.cost %></h3>
-  <h3 class="subtext">Country of Origin: <%= @product.country_of_origin %></h3>
 </div>
 <div class="itembox">
 

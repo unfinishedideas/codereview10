@@ -44,7 +44,17 @@ ul {
 }
 
 .rating_text {
-  color: rgb(255, 213, 105);
+  color: rgb(255, 181, 113);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.price_text {
+  color: rgb(0, 255, 133);
+}
+
+.country_text {
+  color: rgb(255, 52, 113);
 }
 
 .center_p {
@@ -52,7 +62,7 @@ ul {
 }
 
 .splash_text {
-  color: #e6aba0;
+  color: white;
   text-align: center;
   font-size: 40px;
 }
@@ -76,5 +86,10 @@ ul {
 .subtitle {
   /* text-shadow: 2px 2px black; */
   color: #b7d9c6;
+  text-align: center;
+}
+
+.titletext {
+  color: white;
   text-align: center;
 }

@@ -1,23 +1,10 @@
 <!-- <h2>Products Home</h2> -->
 
-<div class="itembox">
-  <h3 class="subtitle">Fresh Items:</h3>
-  <%= render "layouts/display_products", :products => @recent_products %>
-</div>
-
-<div class="itembox">
-  <h3 class="subtitle">Most Reviewed Items:</h3>
-  <%= render "layouts/display_products", :products => @most_reviewed %>
-</div>
-
-<div class="itembox">
-  <h3 class="subtitle">Locally Made Junk:</h3>
-  <%= render "layouts/display_products", :products => @usa_products %>
-</div>
-
-<div class="itembox">
-  <h3 class="subtitle">All Stock:</h3>
-  <%= render "layouts/display_products", :products => @products %>
-</div>
-
 <h2 class="center_p"><%= link_to "Create new product", new_product_path %></h2>
+
+<div class="itembox">
+  <h3 class="subtitle">Everything in Stock:</h3>
+  <hr>
+  <%= render "layouts/display_products", :products => @products %>
+  <hr>
+</div>

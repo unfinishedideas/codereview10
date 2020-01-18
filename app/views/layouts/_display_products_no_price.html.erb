@@ -1,9 +1,7 @@
 <% if products.any? %>
 <ul>
   <% products.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %>
-    <p><span class="price_text">$<%= product.cost %></span></p>
-  </li>
+  <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
 <% else %>
