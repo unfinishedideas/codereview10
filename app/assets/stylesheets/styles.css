@@ -1,12 +1,17 @@
 body {
-  background-color: #273244;
+  background-color: #293346;
+  /* background-color: #181e29; */
   color: #B0B4B4;
 }
 
+hr {
+  border-color: rgb(112, 153, 130);
+}
+
 a {
-  color: #67b3f4;
+  color: #86C0F4;
   /* text-shadow: 2px 2px #52406a; */
-  font-size: 20px;
+  font-size: 15px;
 }
 
 p {
@@ -22,15 +27,32 @@ h3 {
 }
 
 input {
-  color: black;
-}
-textarea {
-  color: black;
+  color: white;
+  background-color: rgb(81, 78, 88);
+  border-style: hidden hidden hidden solid; 
+  border-width: 10px;
+  border-color: rgb(112, 153, 130);
+  padding: 10px;
+  margin: 20px;
+  width: 200px;
 }
 
 label {
-  color: white;
+  color:  rgb(255, 181, 113);
 }
+
+textarea {
+  color: white;
+  background-color: rgb(81, 78, 88);
+  border-style: hidden hidden hidden solid; 
+  border-width: 10px;
+  border-color: rgb(112, 153, 130);
+  padding: 10px;
+  margin: 20px;
+  width: 768px;
+  height: 250px;
+}
+
 ul {
   list-style-type:none;
 }
@@ -61,26 +83,18 @@ ul {
   text-align: center;
 }
 
-.splash_text {
-  color: white;
-  text-align: center;
-  font-size: 40px;
-}
-
-.navbar {
-  text-align: center;
-}
-
 .itembox {
   /* background-color: #6A655F; */
-  background-color: #4e4a46;
+  background-color: #302d2b;
+  box-shadow: 10px 15px #1f1c1a;
   padding: 2%;
   border: 2px #A2BEAE solid;
   border-radius: 20px;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
+  height: 100%;
 }
 
 .subtitle {
@@ -92,4 +106,38 @@ ul {
 .titletext {
   color: white;
   text-align: center;
+}
+
+.grid_containment {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: auto auto;
+}
+
+.splash_text {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  font-size: 50px;
+}
+
+.hero_header {
+  background-color: #302d2b;
+  box-shadow: 10px 15px #1f1c1a;
+  padding: 2%;
+  border: 8px rgb(112, 153, 130) solid;
+  border-radius: 20px;
+  margin-bottom: 4%;
+  margin-top: 1%
+}
+
+.navibar {
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.flashers {
+  color:rgb(0, 255, 133);
+  text-align: center;
+  font-size: 25px;
 }
