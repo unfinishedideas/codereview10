@@ -7,23 +7,21 @@
 
 <div class="grid_containment">
   <div class="itembox">
-
     <h3 class="subtitle">Fresh Items</h3>
+    <br>
     <%= render "layouts/display_products_no_price", :products => @recent_products %>
-
   </div>
 
   <div class="itembox">
-
-    <h3 class="subtitle">Locally Made</h3>
-    <%= render "layouts/display_products_no_price", :products => @usa_products %>
-
-  </div>
-
-  <div class="itembox">
-
     <h3 class="subtitle">Most Reviewed Items</h3>
+    <br>
     <%= render "layouts/display_products_no_price", :products => @most_reviewed %>
-
   </div>
+
+  <div class="itembox">
+    <h3 class="subtitle">Locally Made</h3>
+    <br>
+    <%= render "layouts/display_products_no_price", :products => @usa_products %>
+  </div>
+
 </div>
